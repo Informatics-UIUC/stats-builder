@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%date{HH:mm:ss.SSS} \(%F:%L\) [%logger{0}] [%level] - %msg%n%ex{short}</pattern>
+        </encoder>
+    </appender>
+
+    <!--
+    <appender name="SMTP" class="ch.qos.logback.classic.net.SMTPAppender">
+        <smtpHost>smtp.ncsa.uiuc.edu</smtpHost>
+        <from>topicexplorer@leovip023.ncsa.uiuc.edu</from>
+        <to>capitanu@illinois.edu</to>
+        <subject>ERROR</subject>
+
+        <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+            <layout class="ch.qos.logback.classic.html.HTMLLayout"/>
+        </encoder>
+
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+    </appender>
+    -->
+
+    <!-- Enable logging for the following loggers at the specified level (overrides global setting) -->
+    <!--<logger name="edu.illinois.i3.emop" level="INFO"/> -->
+
+    <!-- Enable Beagle output in Eclipse -->
+    <!-- <consolePlugin/> -->
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+        <!-- <appender-ref ref="SMTP"/> -->
+    </root>
+</configuration>
